@@ -16,7 +16,7 @@ Une adaptation de la disposition de clavier Colemak pour le français.
 ## Inspiration
 
 Cette disposition, issue de discussions entre les contributeurs du [Discord Ergo‑L](https://discord.gg/5xR5K3nAFX), est inspirée de 
-- [Colemak9](https://colemak.com/)
+- [Colemak](https://colemak.com/)
 - [QWERTY-Lafayette](https://qwerty-lafayette.org/)
 - [Ergo‑L](https://ergol.org/)
 - [Colemak DH Fr](https://gitlab.com/gagbo/colemak-dh-fr)
@@ -31,9 +31,11 @@ Ces trois dispositions partagent en très grande partie la couche des symboles, 
 
 ## TODO
 
+- demo x-keyb
 - doc d'install, lien vers Kalamine, etc
 - separer les svg alpha/1dk/symboles
 - packager les drivers
 - ajouter une variante basée sur Colemak DH
 - suivre les maj de la couche AltGr Ergo‑L
 - itérer sur la couche 1dk
+- lien vers Keyzen

@@ -1,24 +1,24 @@
 // Project page  : https://github.com/cedricr/colemak-french-touch
 // Author        : Cedric Rossi
-// Version       : 0.1.0
-// Last change   : 2024-02-03
+// Version       : 0.2.0
+// Last change   : 2024-02-09
 // License       : WTFPL - Do What The Fuck You Want Public License
 //
 // French (Colemak French Touch)
 //
 // Base layer + dead key
 // ╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮
-// ┆ ~   ┃ €   │ @   │ #   │ $   │ %   ┃ ^   │ &   │ *   │ (   │ )   ┃ _   ┆ +   ┆
-// ┆ `   ┃ 1   │ 2   │ 3   │ 4   │ 5   ┃ 6   │ 7   │ 8   │ 9   │ 0   ┃ /   ┆ =   ┆
+// ┆ ~   ┃ !   │ @   │ #   │ $   │ %   ┃ ^   │ &   │ *   │ (   │ )   ┃ _   ┆ +   ┆
+// ┆ `   ┃ 1   │ 2   │ 3   │ 4   │ 5 € ┃ 6   │ 7   │ 8   │ 9   │ 0 ° ┃ -   ┆ =   ┆
 // ╰╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
-//       ┃ Q   │ W   │ F   │ P   │ G   ┃ J   │ L   │ O   │ !   │ Y   ┃ {   ┆ }   ┆
-//       ┃   â │   ê │   î │   ô │   û ┃   € │     │   œ │** ! │     ┃ [   ┆ ]   ┆
+//       ┃ Q   │ W   │ F   │ P   │ G   ┃ J   │ L   │ O   │**   │ Y   ┃ {   ┆ }   ┆
+//       ┃   â │   ê │   î │   ô │   û ┃   - │   – │   œ │**   │     ┃ [   ┆ ]   ┆
 //       ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
-//       ┃ A   │ R   │ S   │ T   │ D   ┃ H   │ N   │ E   │ I   │ U   ┃ "   ┆ |   ┆
-//       ┃   à │   é │   ë │   ï │   ü ┃   ° │   _ │   è │     │   ù ┃ '   ┆ \   ┆
+//       ┃ A   │ R   │ S   │ T   │ D   ┃ H _ │ N   │ E   │ I   │ U   ┃ "   ┆ |   ┆
+//       ┃   à │   é │   ë │   ï │   ü ┃   _ │   — │   è │     │   ù ┃ '   ┆ \   ┆
 // ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
-// ┆ >   ┃ Z   │ X   │ C   │ V ² │ B ³ ┃ K « │ M » │ ? — │ ; • │ :   ┃
-// ┆ <   ┃   æ │     │   ç │   ₂ │   ₃ ┃   “ │   ” │ - – │ , · │ . … ┃
+// ┆ >   ┃ Z   │ X   │ C   │ V   │ B   ┃ K « │ M » │ ; • │ :   │ ?   ┃
+// ┆ <   ┃   æ │     │   ç │     │     ┃   “ │   ” │ , · │ . … │ /   ┃
 // ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚
 //
 // AltGr layer
@@ -42,16 +42,16 @@ xkb_symbols "colemkft" {
     key.type[group1] = "EIGHT_LEVEL";
 
     // Digits
-    key <AE01> {[ 1               , EuroSign        , U2081           , onesuperior     , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 1 €     ₁ ¹
+    key <AE01> {[ 1               , exclam          , U2081           , onesuperior     , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 1 !     ₁ ¹
     key <AE02> {[ 2               , at              , U2082           , twosuperior     , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 2 @     ₂ ²
     key <AE03> {[ 3               , numbersign      , U2083           , threesuperior   , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 3 #     ₃ ³
     key <AE04> {[ 4               , dollar          , U2084           , U2074           , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 4 $     ₄ ⁴
-    key <AE05> {[ 5               , percent         , U2085           , U2075           , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 5 %     ₅ ⁵
+    key <AE05> {[ 5               , percent         , U2085           , U2075           , EuroSign        , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 5 % €   ₅ ⁵
     key <AE06> {[ 6               , asciicircum     , U2086           , U2076           , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 6 ^     ₆ ⁶
     key <AE07> {[ 7               , ampersand       , U2087           , U2077           , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 7 &     ₇ ⁷
     key <AE08> {[ 8               , asterisk        , U2088           , U2078           , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 8 *     ₈ ⁸
     key <AE09> {[ 9               , parenleft       , U2089           , U2079           , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 9 (     ₉ ⁹
-    key <AE10> {[ 0               , parenright      , U2080           , U2070           , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 0 )     ₀ ⁰
+    key <AE10> {[ 0               , parenright      , U2080           , U2070           , degree          , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 0 ) °   ₀ ⁰
 
     // Letters, first row
     key <AD01> {[ q               , Q               , at              , VoidSymbol      , acircumflex     , Acircumflex     , VoidSymbol      , VoidSymbol      ]}; // q Q â Â @
@@ -59,10 +59,10 @@ xkb_symbols "colemkft" {
     key <AD03> {[ f               , F               , greater         , greaterthanequal, icircumflex     , Icircumflex     , VoidSymbol      , VoidSymbol      ]}; // f F î Î > ≥
     key <AD04> {[ p               , P               , dollar          , dead_currency   , ocircumflex     , Ocircumflex     , VoidSymbol      , VoidSymbol      ]}; // p P ô Ô $ ¤
     key <AD05> {[ g               , G               , percent         , U2030           , ucircumflex     , Ucircumflex     , VoidSymbol      , VoidSymbol      ]}; // g G û Û % ‰
-    key <AD06> {[ j               , J               , asciicircum     , dead_circumflex , EuroSign        , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // j J €   ^ ^
-    key <AD07> {[ l               , L               , ampersand       , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // l L     &
+    key <AD06> {[ j               , J               , asciicircum     , dead_circumflex , minus           , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // j J -   ^ ^
+    key <AD07> {[ l               , L               , ampersand       , VoidSymbol      , endash          , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // l L –   &
     key <AD08> {[ o               , O               , asterisk        , multiply        , oe              , OE              , VoidSymbol      , VoidSymbol      ]}; // o O œ Œ * ×
-    key <AD09> {[ ISO_Level5_Latch, exclam          , apostrophe      , dead_acute      , exclam          , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // ! ! !   ' ´
+    key <AD09> {[ ISO_Level5_Latch, ISO_Level5_Latch, apostrophe      , dead_acute      , nobreakspace    , nobreakspace    , VoidSymbol      , VoidSymbol      ]}; //         ' ´
     key <AD10> {[ y               , Y               , grave           , dead_grave      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // y Y     ` `
 
     // Letters, second row
@@ -71,8 +71,8 @@ xkb_symbols "colemkft" {
     key <AC03> {[ s               , S               , parenright      , U207E           , ediaeresis      , Ediaeresis      , VoidSymbol      , VoidSymbol      ]}; // s S ë Ë ) ⁾
     key <AC04> {[ t               , T               , braceright      , VoidSymbol      , idiaeresis      , Idiaeresis      , VoidSymbol      , VoidSymbol      ]}; // t T ï Ï }
     key <AC05> {[ d               , D               , equal           , notequal        , udiaeresis      , Udiaeresis      , VoidSymbol      , VoidSymbol      ]}; // d D ü Ü = ≠
-    key <AC06> {[ h               , H               , backslash       , dead_stroke     , degree          , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // h H °   \ /
-    key <AC07> {[ n               , N               , plus            , plusminus       , underscore      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // n N _   + ±
+    key <AC06> {[ h               , H               , backslash       , dead_stroke     , underscore      , underscore      , VoidSymbol      , VoidSymbol      ]}; // h H _ _ \ /
+    key <AC07> {[ n               , N               , plus            , plusminus       , emdash          , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // n N —   + ±
     key <AC08> {[ e               , E               , minus           , emdash          , egrave          , Egrave          , VoidSymbol      , VoidSymbol      ]}; // e E è È - —
     key <AC09> {[ i               , I               , slash           , division        , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // i I     / ÷
     key <AC10> {[ u               , U               , quotedbl        , dead_diaeresis  , ugrave          , Ugrave          , VoidSymbol      , VoidSymbol      ]}; // u U ù Ù " ¨
@@ -81,16 +81,16 @@ xkb_symbols "colemkft" {
     key <AB01> {[ z               , Z               , asciitilde      , dead_tilde      , ae              , AE              , VoidSymbol      , VoidSymbol      ]}; // z Z æ Æ ~ ~
     key <AB02> {[ x               , X               , bracketleft     , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // x X     [
     key <AB03> {[ c               , C               , bracketright    , VoidSymbol      , ccedilla        , Ccedilla        , VoidSymbol      , VoidSymbol      ]}; // c C ç Ç ]
-    key <AB04> {[ v               , V               , underscore      , endash          , U2082           , twosuperior     , VoidSymbol      , VoidSymbol      ]}; // v V ₂ ² _ –
-    key <AB05> {[ b               , B               , numbersign      , VoidSymbol      , U2083           , threesuperior   , VoidSymbol      , VoidSymbol      ]}; // b B ₃ ³ #
+    key <AB04> {[ v               , V               , underscore      , endash          , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // v V     _ –
+    key <AB05> {[ b               , B               , numbersign      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // b B     #
     key <AB06> {[ k               , K               , bar             , brokenbar       , U201C           , guillemotleft   , VoidSymbol      , VoidSymbol      ]}; // k K “ « | ¦
     key <AB07> {[ m               , M               , exclam          , notsign         , U201D           , guillemotright  , VoidSymbol      , VoidSymbol      ]}; // m M ” » ! ¬
-    key <AB08> {[ minus           , question        , semicolon       , dead_cedilla    , endash          , emdash          , VoidSymbol      , VoidSymbol      ]}; // - ? – — ; ¸
-    key <AB09> {[ comma           , semicolon       , colon           , VoidSymbol      , periodcentered  , U2022           , VoidSymbol      , VoidSymbol      ]}; // , ; · • :
-    key <AB10> {[ period          , colon           , question        , VoidSymbol      , ellipsis        , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // . : …   ?
+    key <AB08> {[ comma           , semicolon       , semicolon       , dead_cedilla    , periodcentered  , U2022           , VoidSymbol      , VoidSymbol      ]}; // , ; · • ; ¸
+    key <AB09> {[ period          , colon           , colon           , VoidSymbol      , ellipsis        , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // . : …   :
+    key <AB10> {[ slash           , question        , question        , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // / ?     ?
 
     // Pinky keys
-    key <AE11> {[ slash           , underscore      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // / _
+    key <AE11> {[ minus           , underscore      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // - _
     key <AE12> {[ equal           , plus            , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // = +
     key <AE13> {[ VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; //
     key <AD11> {[ bracketleft     , braceleft       , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // [ {

@@ -4,8 +4,8 @@
   File          : colemkft.keylayout
   Project page  : https://github.com/cedricr/colemak-french-touch
   Author        : Cedric Rossi
-  Version       : 0.1.0
-  Last change   : 2024-02-03
+  Version       : 0.2.0
+  Last change   : 2024-02-09
   License       : WTFPL - Do What The Fuck You Want Public License
   Reference     : https://developer.apple.com/library/archive/technotes/tn2056/_index.html
 
@@ -29,17 +29,17 @@
 
   Base+Option layers
   ╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮
-  ┆ ~   ┃ € ¹ │ @ ² │ # ³ │ $ ⁴ │ % ⁵ ┃ ^ ⁶ │ & ⁷ │ * ⁸ │ ( ⁹ │ ) ⁰ ┃ _   ┆ +   ┆
-  ┆ `   ┃ 1 ₁ │ 2 ₂ │ 3 ₃ │ 4 ₄ │ 5 ₅ ┃ 6 ₆ │ 7 ₇ │ 8 ₈ │ 9 ₉ │ 0 ₀ ┃ /   ┆ =   ┆
+  ┆ ~   ┃ ! ¹ │ @ ² │ # ³ │ $ ⁴ │ % ⁵ ┃ ^ ⁶ │ & ⁷ │ * ⁸ │ ( ⁹ │ ) ⁰ ┃ _   ┆ +   ┆
+  ┆ `   ┃ 1 ₁ │ 2 ₂ │ 3 ₃ │ 4 ₄ │ 5 ₅ ┃ 6 ₆ │ 7 ₇ │ 8 ₈ │ 9 ₉ │ 0 ₀ ┃ -   ┆ =   ┆
   ╰╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
-        ┃ Q   │ W   │ F   │ P*¤ │ G ‰ ┃ J*^ │ L   │ O × │ !*´ │ Y*` ┃ {   ┆ }   ┆
+        ┃ Q   │ W   │ F   │ P*¤ │ G ‰ ┃ J*^ │ L   │ O × │***´ │ Y*` ┃ {   ┆ }   ┆
         ┃   @ │   < │   > │   $ │   % ┃   ^ │   & │   * │** ' │   ` ┃ [   ┆ ]   ┆
         ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
         ┃ A   │ R ⁽ │ S ⁾ │ T   │ D ≠ ┃ H*/ │ N ± │ E — │ I ÷ │ U*¨ ┃ "   ┆ |   ┆
         ┃   { │   ( │   ) │   } │   = ┃   \ │   + │   - │   / │   " ┃ '   ┆ \   ┆
   ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
-  ┆ >   ┃ Z*~ │ X   │ C   │ V – │ B   ┃ K   │ M ¬ │ ?*¸ │ ;   │ :   ┃
-  ┆ <   ┃   ~ │   [ │   ] │   _ │   # ┃   | │   ! │ - ; │ , : │ . ? ┃
+  ┆ >   ┃ Z*~ │ X   │ C   │ V – │ B   ┃ K   │ M ¬ │ ;*¸ │ :   │ ?   ┃
+  ┆ <   ┃   ~ │   [ │   ] │   _ │   # ┃   | │   ! │ , ; │ . : │ / ? ┃
   ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚
   -->
 <keyboard group="0" id="0" name="French (Colemak French Touch)" maxout="1">
@@ -111,12 +111,12 @@
       <key code="11"  action="b" />
       <key code="45"  action="k" />
       <key code="46"  action="m" />
-      <key code="43"  action="-" />
-      <key code="47"  action="," />
-      <key code="44"  action="." />
+      <key code="43"  action="," />
+      <key code="47"  action="." />
+      <key code="44"  output="/" />
 
       <!-- Pinky keys -->
-      <key code="27"  output="/" />
+      <key code="27"  action="-" />
       <key code="24"  action="=" />
       <key code="33"  output="[" />
       <key code="30"  output="]" />
@@ -195,7 +195,7 @@
     <!-- Shift -->
     <keyMap index="1">
       <!-- Digits -->
-      <key code="18"  output="€" />
+      <key code="18"  output="!" />
       <key code="19"  output="@" />
       <key code="20"  output="#" />
       <key code="21"  output="$" />
@@ -215,7 +215,7 @@
       <key code="16"  action="J" />
       <key code="32"  action="L" />
       <key code="34"  action="O" />
-      <key code="31"  output="!" />
+      <key code="31"  action="dead_1dk" />
       <key code="35"  action="Y" />
 
       <!-- Letters, second row -->
@@ -238,9 +238,9 @@
       <key code="11"  action="B" />
       <key code="45"  action="K" />
       <key code="46"  action="M" />
-      <key code="43"  action="?" />
-      <key code="47"  action=";" />
-      <key code="44"  output=":" />
+      <key code="43"  action=";" />
+      <key code="47"  output=":" />
+      <key code="44"  output="?" />
 
       <!-- Pinky keys -->
       <key code="27"  output="_" />
@@ -365,12 +365,12 @@
       <key code="11"  action="B" />
       <key code="45"  action="K" />
       <key code="46"  action="M" />
-      <key code="43"  action="-" />
-      <key code="47"  action="," />
-      <key code="44"  action="." />
+      <key code="43"  action="," />
+      <key code="47"  action="." />
+      <key code="44"  output="/" />
 
       <!-- Pinky keys -->
-      <key code="27"  output="/" />
+      <key code="27"  action="-" />
       <key code="24"  action="=" />
       <key code="33"  output="[" />
       <key code="30"  output="]" />
@@ -494,7 +494,7 @@
       <key code="46"  output="!" />
       <key code="43"  action=";" />
       <key code="47"  output=":" />
-      <key code="44"  action="?" />
+      <key code="44"  output="?" />
 
       <!-- Pinky keys -->
       <key code="27"  output="&#x0010;" />
@@ -749,6 +749,7 @@
     </action>
     <action id="5">
       <when state="none"       output="5" />
+      <when state="1dk"        output="€" />
       <when state="circumflex" output="⁵" />
     </action>
     <action id="6">
@@ -773,6 +774,7 @@
     </action>
     <action id="0">
       <when state="none"       output="0" />
+      <when state="1dk"        output="°" />
       <when state="circumflex" output="⁰" />
     </action>
     <action id=")">
@@ -851,7 +853,7 @@
     </action>
     <action id="j">
       <when state="none"       output="j" />
-      <when state="1dk"        output="€" />
+      <when state="1dk"        output="-" />
       <when state="circumflex" output="ĵ" />
       <when state="stroke"     output="ɉ" />
     </action>
@@ -862,6 +864,7 @@
     </action>
     <action id="l">
       <when state="none"       output="l" />
+      <when state="1dk"        output="–" />
       <when state="acute"      output="ĺ" />
       <when state="cedilla"    output="ļ" />
       <when state="stroke"     output="ł" />
@@ -1003,7 +1006,7 @@
     </action>
     <action id="h">
       <when state="none"       output="h" />
-      <when state="1dk"        output="°" />
+      <when state="1dk"        output="_" />
       <when state="circumflex" output="ĥ" />
       <when state="diaeresis"  output="ḧ" />
       <when state="cedilla"    output="ḩ" />
@@ -1012,6 +1015,7 @@
     </action>
     <action id="H">
       <when state="none"       output="H" />
+      <when state="1dk"        output="_" />
       <when state="circumflex" output="Ĥ" />
       <when state="diaeresis"  output="Ḧ" />
       <when state="cedilla"    output="Ḩ" />
@@ -1020,7 +1024,7 @@
     </action>
     <action id="n">
       <when state="none"       output="n" />
-      <when state="1dk"        output="_" />
+      <when state="1dk"        output="—" />
       <when state="grave"      output="ǹ" />
       <when state="acute"      output="ń" />
       <when state="tilde"      output="ñ" />
@@ -1145,23 +1149,19 @@
     </action>
     <action id="v">
       <when state="none"       output="v" />
-      <when state="1dk"        output="₂" />
       <when state="tilde"      output="ṽ" />
     </action>
     <action id="V">
       <when state="none"       output="V" />
-      <when state="1dk"        output="²" />
       <when state="tilde"      output="Ṽ" />
     </action>
     <action id="b">
       <when state="none"       output="b" />
-      <when state="1dk"        output="₃" />
       <when state="stroke"     output="ƀ" />
       <when state="currency"   output="฿" />
     </action>
     <action id="B">
       <when state="none"       output="B" />
-      <when state="1dk"        output="³" />
       <when state="stroke"     output="Ƀ" />
       <when state="currency"   output="₱" />
     </action>
@@ -1191,15 +1191,6 @@
       <when state="acute"      output="Ḿ" />
       <when state="currency"   output="ℳ" />
     </action>
-    <action id="-">
-      <when state="none"       output="-" />
-      <when state="1dk"        output="–" />
-      <when state="circumflex" output="⁻" />
-    </action>
-    <action id="?">
-      <when state="none"       output="?" />
-      <when state="1dk"        output="—" />
-    </action>
     <action id=",">
       <when state="none"       output="," />
       <when state="1dk"        output="·" />
@@ -1214,6 +1205,10 @@
     </action>
 
     <!-- Pinky keys -->
+    <action id="-">
+      <when state="none"       output="-" />
+      <when state="circumflex" output="⁻" />
+    </action>
     <action id="=">
       <when state="none"       output="=" />
       <when state="circumflex" output="⁼" />
@@ -1275,7 +1270,7 @@
   </actions>
 
   <terminators>
-    <when state="1dk"        output="!" />
+    <when state="1dk"        output="&#x00a0;" />
     <when state="grave"      output="`" />
     <when state="acute"      output="´" />
     <when state="circumflex" output="^" />

@@ -25,6 +25,7 @@ Cette disposition, issue de discussions entre les contributeurs du [Discord Ergo
 
 - [QWERTY-Lafayette](https://qwerty-lafayette.org/) a.k.a. « la meilleure distribution du monde », est une alternative à QWERTY, auquel elle ajoute la 1dk pour permettre une typographie soignée en français et un usage facilité sur les claviers ergonomiques, tout en étant utilisable sans apprentissage par les utilisateurs QWERTY
 - [Ergo‑L](https://ergol.org/) qui a tous les avantages de QWERTY-Lafayette et de Colemak French Touch, mais en cherchant l’optimisation maximale de la couche alphabétique pour le français et l'anglais, au prix d’un réapprentissage plus important.
+- [Erglace](https://github.com/Lysquid/Erglace), inspiré d’Ergo‑L, mais avec des contraintes différentes (en particulier, elle n’essaye pas de préserver les raccourcis QWERTY)
 
 Ces trois dispositions partagent la couche des symboles, afin de faciliter la transition entre elles.
 

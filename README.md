@@ -11,7 +11,15 @@ Une adaptation de la disposition de clavier Colemak pour le français.
 - les symboles de programmation sont accessibles sur la couche AltGr (en bleu)
 - Hormis les nombres, toutes les lettres et symboles sont accessibles sur un clavier 3 x 10
 
-![](dist/colemkft.svg)
+![](img/colemkft_ansi.svg)
+
+<br>
+Version ortholinéaire :  
+
+
+![](img/colemkft_all.svg)
+
+
 
 ## Inspiration
 

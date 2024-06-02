@@ -1,5 +1,5 @@
 all:
-	kalamine make colemak-french-touch.toml
+	kalamine build colemak-french-touch.toml
 	mv -f dist/colemkft.svg img
 	cp -f img/colemkft.svg img/colemkft_1dk.svg
 	cp -f img/colemkft.svg img/colemkft_altgr.svg

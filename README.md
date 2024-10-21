@@ -1,3 +1,7 @@
+Dépôt déplacé vers https://codeberg.org/cedricr/colemak-french-touch
+
+***
+
 # Colemak French Touch
 
 Une adaptation de la disposition de clavier Colemak pour le français.
